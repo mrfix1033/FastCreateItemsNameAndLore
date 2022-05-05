@@ -26,6 +26,7 @@ public class createItems {
     }
 
     public static ItemStack createItem(ItemStack item, String name) {
+        item = new ItemStack(item);
         ItemMeta meta = item.getItemMeta();
         meta.setDisplayName(name);
         item.setItemMeta(meta);
@@ -33,6 +34,7 @@ public class createItems {
     }
 
     public static ItemStack createItem(ItemStack item, String name, List<String> lore) {
+        item = new ItemStack(item);
         ItemMeta meta = item.getItemMeta();
         meta.setDisplayName(name);
         meta.setLore(lore);
