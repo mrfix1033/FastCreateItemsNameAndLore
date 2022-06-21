@@ -9,28 +9,15 @@ import java.util.List;
 public class createItems {
 
     public static ItemStack createItem(Material material, String name) {
-        ItemStack item = new ItemStack(material);
-        ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName(name);
-        item.setItemMeta(meta);
-        return item;
+        return createItem(material, name, null);
     }
 
     public static ItemStack createItem(Material material, String name, List<String> lore) {
-        ItemStack item = new ItemStack(material);
-        ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName(name);
-        meta.setLore(lore);
-        item.setItemMeta(meta);
-        return item;
+        return createItem(new ItemStack(material), name, lore);
     }
 
     public static ItemStack createItem(ItemStack item, String name) {
-        item = new ItemStack(item);
-        ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName(name);
-        item.setItemMeta(meta);
-        return item;
+        return createItem(item, name, null);
     }
 
     public static ItemStack createItem(ItemStack item, String name, List<String> lore) {
